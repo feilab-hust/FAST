@@ -49,17 +49,34 @@ Deep-learning model requirments:
 
 
 
-# Quick Start Guide
+
+# Quick Start on network validation and 3D reconstruction
+  We provide example data and trained models to quickly validate the **low-resolution light-field images(ST)** to **high-resolution fast-fusion images**.The models are located at "./FAST_Fusion/examples/FAST_Fusion/models" while ST data are located at "./FAST_Fusion/examples/FAST_Fusion/example_data/ST".
+  
+  a. Run "3_prediction_viewstack.py" in "./FAST_Fusion/examples/FAST_Fusion" to get a fast-fusion image.
+
+  b. Run "batch_deconve.m" in "./FAST_Deconvolution" to get a 3D reconstruction.
+
+
+
 
 
 
 
 # Citation
+If you use this code and relevant data, please cite the corresponding paper where original methods appeared: 
+\
+*Full-aperture single-shot tomography unifies high-speed and high-resolution 3D imaging*
+
+
 
 
 
 
 # Contact
+Should you have any questions regarding this code and the corresponding results, please contact Jiahao Sun (d202381203@hust.edu.cn@hust.edu.cn)
+
+
 
 
 
