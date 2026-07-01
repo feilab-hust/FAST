@@ -1,0 +1,34 @@
+% oLaF - a flexible 3D reconstruction framework for light field microscopy
+% Copyright (c)2017-2020 Anca Stefanoiu 
+
+function MLARRAY = FLFM_mlaTransmittance(Resolution, ulensPattern)
+
+%% Compute the ML array as a grid of phase/amplitude masks corresponding to mlens
+ylength = length(Resolution.yspace);
+xlength = length(Resolution.xspace);
+
+
+MLcenters = zeros(ylength, xlength);
+
+
+
+%% raw_7view_doe
+d=499;
+d1=ceil(0/6.5);
+center=750;
+fprintf('\n %d size  -- center %d',d,center);
+MLcenters(center-ceil(sqrt(3)*(d+d1)/2),center-ceil((d+d1)/2))=1;
+MLcenters(center-ceil(sqrt(3)*(d+d1)/2),center+ceil((d+d1)/2))=1;
+
+MLcenters(center,center-d-d1)=1;
+MLcenters(center,center)=1;
+MLcenters(center,center+d+d1)=1;
+
+MLcenters(center+ceil(sqrt(3)*(d+d1)/2),center-ceil((d+d1)/2))=1;
+MLcenters(center+ceil(sqrt(3)*(d+d1)/2),center+ceil((d+d1)/2))=1;
+
+
+% apply the mlens pattern at every ml center
+write3d(MLcenters,'F:/WSC/Project_code/FLFM_SIM/FLFM_7view/FLFM_PSF_generate/PSF/mask/mask_PSF.tif',32);
+MLARRAY  = conv2(MLcenters, ulensPattern, 'same');
+
