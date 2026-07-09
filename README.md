@@ -1,5 +1,5 @@
 
-# FAST
+# Full-aperture single-shot tomography unifies high-speed and high-resolution 3D imaging
 This repository is developed based on the paper *Full-aperture single-shot tomography unifies high-speed and high-resolution 3D imaging*, which provides a computational framework which enables full-pupil 3D imaging of biological dynamics from in situ 2D FA-ST snapshot.
 
 
