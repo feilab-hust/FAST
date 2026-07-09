@@ -74,7 +74,7 @@ If you use this code and relevant data, please cite the corresponding paper wher
 
 
 # Contact
-Should you have any questions regarding this code and the corresponding results, please contact Jiahao Sun (d202381203@hust.edu.cn@hust.edu.cn)
+Should you have any questions regarding this code and the corresponding results, please contact Jiahao Sun (d202381203@hust.edu.cn)
 
 
 
